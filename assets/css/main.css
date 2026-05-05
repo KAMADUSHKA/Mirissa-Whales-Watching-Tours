@@ -143,13 +143,13 @@ h6 {
 .header {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 8px 0;
+  padding: 2px 0;
   transition: all 0.5s;
   z-index: 997;
 }
 
 .header .logo {
-  line-height: 1;
+  line-height: 0;
 }
 
 .header .logo img {
@@ -2957,18 +2957,38 @@ section,
   transform: scale(1.1);
 }
 
+.hero-video {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
 .carousel-item {
   height: 100vh;
   min-height: 300px;
   background-size: cover;
   background-position: center;
   position: relative;
+  overflow: hidden;
 }
+
+.carousel-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 0;
+}
+
 .carousel-caption {
   bottom: 35%;
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.8s ease-in-out;
+  z-index: 2;
 }
 
 .carousel-caption h5 {
@@ -2994,7 +3014,7 @@ section,
   top: 0; left: 0;
   width: 100%; height: 100%;
   background: rgba(0, 14, 32, 0.422);
-  z-index: 0;
+  z-index: 1;
 }
 
 /* Animate caption only on active slide */
