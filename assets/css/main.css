@@ -56,7 +56,7 @@ body {
 }
 
 body::before {
-  background: linear-gradient(color-mix(in srgb, #000000, transparent 30%), color-mix(in srgb, #000000, transparent 30%)), url("../img/bg/abstract-bg-4.jpg") no-repeat center center/cover;
+  background: linear-gradient(color-mix(in srgb, #0000008d, transparent 50%), color-mix(in srgb, #0000002d, transparent 50%)), url("../img/bg/abstract-bg-4.jpg") no-repeat center center/cover;
   content: "";
   position: fixed;
   inset: 0;
@@ -1033,7 +1033,61 @@ section,
 .about {
   padding-top: 120px;
   padding-bottom: 60px;
+
 }
+
+
+
+.about-box {
+  position: relative;
+  border-radius: 20px;
+  padding: 70px 60px;
+  color: #fff;
+  overflow: hidden;
+}
+
+.about-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+      rgba(13, 33, 78, 0.414),
+      rgba(10, 25, 60, 0.85)
+    ),
+    url("../img/bg/Mirissa-Whales-Watching-Tours-whale-1.jpeg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  z-index: 0;
+}
+
+/* keep content above */
+.about-box > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .about-box::before {
+    background: linear-gradient(
+        rgba(13, 33, 78, 0.414),
+        rgba(10, 25, 60, 0.85)
+      ),
+      url("../img/bg/Mirissa-Whales-Watching-Tours-whale-M1.jpeg.png"); /* 👉 your mobile image */
+
+    background-size: cover;
+    background-position: center;
+
+    /* IMPORTANT: disable fixed on mobile */
+    background-attachment: fixed;
+  }
+}
+
+
 
 .about .about-content h3 {
   font-size: 32px;
