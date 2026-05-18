@@ -1037,7 +1037,7 @@ section,
 }
 
 
-
+/* About box */
 .about-box {
   position: relative;
   border-radius: 20px;
@@ -1086,6 +1086,109 @@ section,
     background-attachment: fixed;
   }
 }
+
+/* About box - 1 */
+.about-box-1 {
+  position: relative;
+  border-radius: 20px;
+  padding: 70px 60px;
+  color: #fff;
+  overflow: hidden;
+}
+
+.about-box-1::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+      rgba(13, 33, 78, 0.414),
+      rgba(10, 25, 60, 0.85)
+    ),
+    url("../img/bg/Mirissa-Whales-Watching-Tours-whales-2.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  z-index: 0;
+}
+
+
+.about-box-1 > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .about-box-1::before {
+    background: linear-gradient(
+        rgba(13, 33, 78, 0.414),
+        rgba(10, 25, 60, 0.85)
+      ),
+      url("../img/bg/Mirissa-Whales-Watching-Tours-whale-M11.jpeg.png"); /* 👉 your mobile image */
+
+    background-size: cover;
+    background-position: center;
+
+    /* IMPORTANT: disable fixed on mobile */
+    background-attachment: fixed;
+  }
+}
+
+
+/* About box - 2 */
+.about-box-2 {
+  position: relative;
+  border-radius: 20px;
+  padding: 70px 60px;
+  color: #fff;
+  overflow: hidden;
+}
+
+.about-box-2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+      rgba(13, 33, 78, 0.414),
+      rgba(10, 25, 60, 0.85)
+    ),
+    url("../img/bg/Mirissa-Whales-Watching-Tours-whales-3.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  z-index: 0;
+}
+
+
+.about-box-2 > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .about-box-2::before {
+    background: linear-gradient(
+        rgba(13, 33, 78, 0.414),
+        rgba(10, 25, 60, 0.85)
+      ),
+      url("../img/bg/Mirissa-Whales-Watching-Tours-whale-M3.jpeg.png"); /* 👉 your mobile image */
+
+    background-size: cover;
+    background-position: center;
+
+    /* IMPORTANT: disable fixed on mobile */
+    background-attachment: fixed;
+  }
+}
+
+
 
 
 .about-video {
