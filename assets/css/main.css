@@ -2765,7 +2765,7 @@ section,
     text-align: center;
   }
 }
-
+/* 
 .events .featured-events h3 {
   text-align: center;
   font-size: 2rem;
@@ -2847,7 +2847,7 @@ section,
 
 @media (min-width: 768px) {
   .events .featured-events .featured-event-card .event-content .event-image {
-    /* max-width: 500px; */
+    
     height: auto;
   }
 }
@@ -2906,7 +2906,290 @@ section,
 .events .featured-events .featured-event-card .event-content .event-info .btn-details:hover {
   background-color: var(--accent-color);
   color: var(--contrast-color);
+} */
+
+
+
+/* ======================================
+   SECTION TITLE
+====================================== */
+
+.events .featured-events h3 {
+  text-align: center;
+  font-size: 2.3rem;
+  margin-bottom: 3rem;
+  position: relative;
+  padding-bottom: 1rem;
+  color: #fff;
 }
+
+.events .featured-events h3::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  border-radius: 20px;
+
+  background: linear-gradient(
+    to right,
+    #00c6ff,
+    #0072ff
+  );
+
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ======================================
+   CARD DESIGN
+====================================== */
+
+.events .featured-events .featured-event-card {
+  position: relative;
+  overflow: hidden;
+
+  min-height: 640px;
+
+  border-radius: 22px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(17, 3, 121, 0.977),
+    rgba(18, 54, 102, 0.192)
+  );
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.18);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+/* Animated Shine */
+.events .featured-events .featured-event-card::before {
+  content: "";
+
+  position: absolute;
+  top: -120%;
+  left: -120%;
+
+  width: 250%;
+  height: 250%;
+
+  background: linear-gradient(
+    120deg,
+    transparent 40%,
+    rgba(255,255,255,0.08) 50%,
+    transparent 60%
+  );
+
+  transform: rotate(25deg);
+
+  animation: shineMove 7s linear infinite;
+
+  z-index: 1;
+}
+
+/* Content Above Animation */
+.events .featured-events .featured-event-card .event-content {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hover Effect */
+.events .featured-events .featured-event-card:hover {
+  transform: translateY(-10px);
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.28),
+    0 0 25px rgba(0, 198, 255, 0.18);
+}
+
+/* ======================================
+   IMAGE
+====================================== */
+
+.events .featured-events .featured-event-card .event-image {
+  height: 320px;
+  overflow: hidden;
+}
+
+.events .featured-events .featured-event-card .event-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: transform 0.7s ease;
+}
+
+.events .featured-events .featured-event-card:hover .event-image img {
+  transform: scale(1.08);
+}
+
+/* ======================================
+   CONTENT
+====================================== */
+
+.events .featured-events .featured-event-card .event-info {
+  padding: 1.8rem;
+}
+
+.events .featured-events .featured-event-card .event-info h4 {
+  font-size: 2rem;
+  font-weight: 700;
+
+  margin-bottom: 18px;
+
+  color: #ffffff;
+
+  line-height: 1.2;
+}
+
+/* Meta */
+
+.events .featured-events .featured-event-card .event-meta {
+  list-style: none;
+
+  padding: 0;
+  margin: 0 0 22px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.events .featured-events .featured-event-card .event-meta li {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.82);
+}
+
+.events .featured-events .featured-event-card .event-meta li i {
+  color: #00c6ff;
+  margin-right: 8px;
+}
+
+/* Description */
+
+.events .featured-events .featured-event-card .event-info p {
+  color: rgba(255,255,255,0.88);
+
+  line-height: 1.8;
+
+  margin-bottom: 32px;
+
+  font-size: 1.05rem;
+}
+
+/* ======================================
+   BUTTON
+====================================== */
+
+.events .featured-events .featured-event-card .btn-details {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+
+  padding: 12px 30px;
+
+  border-radius: 50px;
+
+  background: linear-gradient(
+    135deg,
+    #00c6ff,
+    #0072ff
+  );
+
+  color: #ffffff;
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  box-shadow:
+    0 8px 20px rgba(0,114,255,0.28);
+
+  transition: all 0.3s ease;
+}
+
+.events .featured-events .featured-event-card .btn-details:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 24px rgba(0,114,255,0.45);
+
+  color: #fff;
+}
+
+/* ======================================
+   MOBILE
+====================================== */
+
+@media (max-width: 768px) {
+
+  .events .featured-events h3 {
+    font-size: 2rem;
+  }
+
+  .events .featured-events .featured-event-card {
+    min-height: auto;
+    border-radius: 20px;
+  }
+
+  .events .featured-events .featured-event-card .event-image {
+    height: 260px;
+  }
+
+  .events .featured-events .featured-event-card .event-info {
+    padding: 1.5rem;
+  }
+
+  .events .featured-events .featured-event-card .event-info h4 {
+    font-size: 1.5rem;
+  }
+
+  .events .featured-events .featured-event-card .event-meta li {
+    font-size: 0.95rem;
+  }
+
+  .events .featured-events .featured-event-card .event-info p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .events .featured-events .featured-event-card .btn-details {
+    width: 100%;
+  }
+}
+
+/* ======================================
+   ANIMATION
+====================================== */
+
+@keyframes shineMove {
+
+  0% {
+    transform: translateX(-100%) rotate(25deg);
+  }
+
+  100% {
+    transform: translateX(100%) rotate(25deg);
+  }
+}
+
+
+
 
 /*--------------------------------------------------------------
 # Contact Section
