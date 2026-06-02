@@ -3653,7 +3653,7 @@ section,
 }
 
 /* Glass effect for modal content */
-/* .glass-modal {
+.glass-modal {
   background: rgba(38, 108, 0, 0.15); 
   backdrop-filter: blur(15px) saturate(150%);
   -webkit-backdrop-filter: blur(15px) saturate(150%);
@@ -3675,133 +3675,8 @@ section,
 
 .glass-modal ul li {
   color: #f1f1f1;
-} */
-
-/* =========================
-   GLASS MODAL DESIGN
-========================= */
-
-.glass-modal {
-    position: relative;
-    overflow: hidden;
-    border: none;
-    border-radius: 25px;
-    background: rgba(255,255,255,0.12);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
 }
 
-/* Animated Gradient Background */
-.glass-modal::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        135deg,
-        #00c6ff,
-        #0072ff,
-        #00c6ff,
-        #00ffb3
-    );
-    background-size: 400% 400%;
-    animation: gradientMove 12s ease infinite;
-    opacity: 0.15;
-    z-index: -2;
-}
-
-/* Floating Glow Circles */
-.glass-modal::after {
-    content: "";
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    top: -100px;
-    right: -100px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.15);
-    filter: blur(50px);
-    animation: floatGlow 8s ease-in-out infinite;
-    z-index: -1;
-}
-
-@keyframes gradientMove {
-    0%{
-        background-position:0% 50%;
-    }
-    50%{
-        background-position:100% 50%;
-    }
-    100%{
-        background-position:0% 50%;
-    }
-}
-
-@keyframes floatGlow {
-    0%,100%{
-        transform: translateY(0px);
-    }
-    50%{
-        transform: translateY(25px);
-    }
-}
-
-/* Modal Header */
-.glass-modal .modal-header {
-    border-bottom: 1px solid rgba(255,255,255,0.15);
-}
-
-.glass-modal .modal-title {
-    color: #fff;
-    font-weight: 700;
-}
-
-/* Modal Body */
-.glass-modal .modal-body {
-    color: #fff;
-}
-
-/* Image Animation */
-.glass-modal img {
-    transition: all 0.5s ease;
-    border-radius: 20px;
-}
-
-.glass-modal img:hover {
-    transform: scale(1.03);
-}
-
-/* List Styling */
-.glass-modal ul {
-    padding-left: 1rem;
-}
-
-.glass-modal li {
-    margin-bottom: 8px;
-}
-
-/* Mobile Optimization */
-@media (max-width: 768px) {
-
-    .glass-modal {
-        border-radius: 20px;
-    }
-
-    .glass-modal::after {
-        width: 180px;
-        height: 180px;
-        top: -50px;
-        right: -50px;
-    }
-
-    .glass-modal .modal-title {
-        font-size: 1.1rem;
-    }
-
-    .glass-modal .modal-body {
-        font-size: 14px;
-    }
-}
 
 
 
