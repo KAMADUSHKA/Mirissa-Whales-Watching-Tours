@@ -1771,7 +1771,7 @@ section,
   overflow: hidden;
     background: rgba(255,255,255,0.08);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.15);
+  border: 1px solid rgba(255, 255, 255, 0.264);
   padding: 10px;
   border-radius: 15px;
 }
@@ -1798,7 +1798,7 @@ section,
 
 .menu .special-item .menu-item-img .menu-item-badges span {
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
   padding: 4px 10px;
   border-radius: 20px;
   text-transform: uppercase;
